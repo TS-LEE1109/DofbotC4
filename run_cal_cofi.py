@@ -3,8 +3,17 @@ import numpy as np
 import cv2
 from ultralytics import YOLO
 
+# Define the base directory (relative to the script's location)
+base_dir = os.path.dirname(__file__)
+
+# Define the relative path to the model file
+model_path = os.path.join(base_dir, 'data', 'best.pt')
+
+# Load YOLOv8 model using the relative path
+model = YOLO(model_path)
+
 # Load the custom YOLOv8 model with your trained weights
-model = YOLO('/home/piai/ddolmang/model1/yolov8n_pt/my_custom_model5/weights/best.pt')
+# model = YOLO('/home/piai/ddolmang/model1/yolov8n_pt/my_custom_model5/weights/best.pt')
 
 # Camera intrinsics (replace with actual calibration data)
 fx, fy = 2227.93, 2211.78  # Focal length (example values)
