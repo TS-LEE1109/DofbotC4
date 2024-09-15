@@ -16,10 +16,10 @@ def move_and_read_random_servo_angles():
     servo_angles = [random.randint(0, 180) for _ in range(6)]
 
     # 서보 모터를 랜덤 각도로 이동
-    for i in range(6):
-        print(f"Moving Servo {i+1} to {servo_angles[i]} degrees")
-        Arm.Arm_serial_servo_write(i+1, servo_angles[i], 500)  # 각도 이동 (500ms 동안 이동)
-        time.sleep(0.5)  # 각 서보의 이동이 완료되도록 대기
+    #for i in range(6):
+        #print(f"Moving Servo {i+1} to {servo_angles[i]} degrees")
+        #Arm.Arm_serial_servo_write(i+1, servo_angles[i], 500)  # 각도 이동 (500ms 동안 이동)
+        #time.sleep(0.5)  # 각 서보의 이동이 완료되도록 대기
 
     # 모든 서보 모터의 현재 각도를 읽고 출력
     print("\nReading current angles of all servos:")
