@@ -22,9 +22,9 @@ class TrainParams:
 
         # 학습 설정 파라미터
         self.model = 'yolov8s.yaml'  # YOLOv8s 모델 설정 파일
-        self.epochs = 100  # 학습할 에포크 수
+        self.epochs = 10  # 학습할 에포크 수
         self.img_size = 640  # 입력 이미지 크기
-        self.batch_size = 16  # 배치 크기
+        self.batch_size = 1  # 배치 크기
         self.save_period = 1  # 매 에포크마다 가중치 저장
         self.patience = 10  # Early stopping: 성능 개선이 없을 경우 10 에포크 후 중지
         self.optimizer = 'AdamW'  # 최적화 알고리즘
