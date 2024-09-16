@@ -37,7 +37,7 @@ for epoch in tqdm(range(train_params.epochs), desc="Training YOLOv8s"):
 
     # 2. Validation step
     results_val = model.val(
-        data=train_params.val_data,
+        data=train_params.yaml_path,
         batch=train_params.batch_size,
         imgsz=train_params.img_size,
         device=device
@@ -54,7 +54,7 @@ for epoch in tqdm(range(train_params.epochs), desc="Training YOLOv8s"):
 
 # 마지막 에포크 후 Test
 results_test = model.val(
-    data=train_params.test_data,
+    data=train_params.yaml_path,
     batch=train_params.batch_size,
     imgsz=train_params.img_size,
     device=device
