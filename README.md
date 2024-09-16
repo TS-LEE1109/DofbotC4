@@ -18,4 +18,6 @@ train.py 를 시작한다.
 
 5. pt파일을 기반으로 Inference를 돌려 좌표에 대한 json파일을 얻는다.
 
+깔아야하는거!
 
+cuda 12.1에 맞는 Pytorch, numpy, 싸이킷런, ultralytics 등등.. gpt한테 cuda 12.1에 맞게 알려달라고 하세영! 
