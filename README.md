@@ -21,3 +21,23 @@ train.py 를 시작한다.
 깔아야하는거!
 
 cuda 12.1에 맞는 Pytorch, numpy, 싸이킷런, ultralytics 등등.. gpt한테 cuda 12.1에 맞게 알려달라고 하세영! 
+
+realsense 카메라 설치 (인텔 realsense2 - 라즈베리파이 4에 깔기)
+
+sudo apt-get update
+sudo apt-get install git cmake g++ libgtk-3-dev libglib2.0-dev
+sudo apt-get install libboost-all-dev
+sudo apt-get install libssl-dev
+
+git clone https://github.com/IntelRealSense/librealsense.git
+cd librealsense
+
+mkdir build && cd build
+cmake ../ -DBUILD_EXAMPLES=true -DBUILD_GRAPHICAL_EXAMPLES=false
+make -j$(nproc)
+sudo make install
+
+sudo ldconfig
+
+realsense-viewer
+
